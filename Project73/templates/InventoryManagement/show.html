@@ -1,0 +1,167 @@
+{% extends 'InventoryManagement/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Show Product</title>
+    {% endblock %}
+
+{% block content %}
+    <table class="table table-secondary">
+        <tr>
+            <th>Date</th>-->
+            <th>Provider</th>
+            <th>Name of Product</th>
+            <th>price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Stock</th>
+        </tr>
+        {% for i in order %}
+        <tr>
+            <td>{{i.date}}</td>
+            <td>{{i.provider}}</td>
+            <td>{{i.name_of_product}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.quantity}}</td>
+            <td>{{i.amount}}</td>
+            <td>{{i.price}}</td>
+
+
+        <td>
+            <a href="{% url 'update' i.id %}">
+                <button class="btn btn-dark ">Update</button>
+            </a>
+        </td>
+
+        <td>
+            <a href="{% url 'delete' i.id %}">
+                <button class="btn btn-danger">Delete</button>
+            </a>
+        </td>
+        </tr>
+        {% endfor %}
+    </table>
+<br>
+    <a href="{% url 'add' %}">
+        <button class="btn btn-success">Add Product</button>
+    </a>
+        {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+<!--    <form method="post">-->
+<!--        <table border="1x">-->
+<!--        <tr>-->
+<!--            <th>Date</th>-->
+<!--            <th>Provider</th>-->
+<!--            <th>Name of Product</th>-->
+<!--            <th>price</th>-->
+<!--            <th>Quantity</th>-->
+<!--            <th>Amount</th>-->
+<!--            <th>Stock</th>-->
+<!--        </tr>-->
+
+<!--        {% for i in info %}-->
+<!--        <tr>-->
+<!--                <td>{{i.date}}</td>-->
+<!--                <td>{{i.provider}}</td>-->
+<!--                <td>{{i.name_of_product}}</td>-->
+<!--                <td>{{i.price}}</td>-->
+<!--                <td>{{i.quantity}}</td>-->
+<!--                <td>{{i.amount}}</td>-->
+<!--                <td>{{i.stock}}</td>-->
+
+<!--            <td>-->
+<!--                <a href="{% url 'update' i.id %}">-->
+<!--                    <button>Update</button>-->
+<!--                </a>-->
+<!--            </td>-->
+
+<!--            <td>-->
+<!--                <a href="{% url 'delete' i.id %}">-->
+<!--                    <button>Delete</button>-->
+<!--                </a>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--            {% endfor %}-->
+<!--            </table>-->
+<!--        <br><br>-->
+<!--        <a href="{% url 'add' %}">-->
+<!--            <button>Add order</button>-->
+<!--        </a>-->
+<!--    </form>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
